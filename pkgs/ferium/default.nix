@@ -9,16 +9,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "ferium";
-  version = "v4.0.0";
+  version = "4.0.0";
 
   src = fetchFromGitHub {
-    owner = "theRookieCoder";
+    owner = "gorilla-devs";
     repo = pname;
-    rev = version;
+    rev = "v${version}";
     sha256 = "sha256-x781dQpG0N6pcEuF8C1R8g6cUNIevOTUMG30ruJY9+Y=";
   };
 
-  cargoSha256 = "sha256-HBlFJPDSDZ7WcWMvx6WbQqHt7irAC4BC3RYEBEmju+k=";
+  cargoSha256 = "sha256-/3GVCm5x8aXFgp50z3Hn9ImhWqCDAIuRAKvzSoFyAFM=";
   
   # Do not build the gui part of the package.
   buildNoDefaultFeatures = true;
