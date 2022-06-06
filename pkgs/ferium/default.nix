@@ -18,6 +18,8 @@ rustPlatform.buildRustPackage rec {
     sha256 = "sha256-5DYdeK6JdA7oLBkjP3WkwLwlBitdf4Yt2dNP7P0INN0=";
   };
 
+  patches = [ ./0001-Remove-std-process-ExitCode.patch ];
+
   cargoSha256 = "sha256-7rpxHfe+pWarPJ72WSXjgr63YctZ5+RrsEgmw7o66VI=";
   
   # Do not build the gui part of the package.
