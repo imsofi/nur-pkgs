@@ -16,10 +16,8 @@
 
   ferium = pkgs.callPackage ./pkgs/ferium { };
 
-  packwiz = if pkgs.lib.versionOlder pkgs.lib.trivial.release "22.05" then
-    null
-  else 
-    pkgs.callPackage ./pkgs/packwiz { };
+  packwiz = pkgs.callPackage ./pkgs/packwiz { };
+
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
