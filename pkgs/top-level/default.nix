@@ -1,0 +1,14 @@
+{ pkgs, ... }:
+rec {
+  # The `lib`, `modules`, and `overlay` names are special
+  lib = import ../../lib { inherit pkgs; }; # functions
+  modules = import ../../modules; # NixOS modules
+  overlays = import ../../overlays; # nixpkgs overlays
+
+  ferium = pkgs.callPackage ../tools/games/minecraft/ferium { };
+
+  packwiz = pkgs.callPackage ../tools/games/minecraft/packwiz { };
+
+  # some-qt5-package = pkgs.libsForQt5.callPackage ../some-qt5-package { };
+  # ...
+}
