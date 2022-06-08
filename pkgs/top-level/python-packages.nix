@@ -7,4 +7,6 @@ rec {
   flask-webtest = callPackage ../development/python-modules/flask-webtest { };
 
   sphinx-issues = callPackage ../development/python-modules/sphinx-issues { };
+
+  slapd = callPackage ../development/python-modules/slapd { inherit sphinx-issues; };
 }
