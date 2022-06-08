@@ -5,6 +5,10 @@ rec {
   modules = import ../../modules; # NixOS modules
   overlays = import ../../overlays; # nixpkgs overlays
 
+  extraPython3Packages = pkgs.recurseIntoAttrs (
+    pkgs.python3Packages.callPackage ./python-packages.nix { }
+  );
+
   ferium = pkgs.callPackage ../tools/games/minecraft/ferium { };
 
   packwiz = pkgs.callPackage ../tools/games/minecraft/packwiz { };
