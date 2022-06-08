@@ -5,4 +5,6 @@ rec {
   flask-themer = callPackage ../development/python-modules/flask-themer { };
 
   flask-webtest = callPackage ../development/python-modules/flask-webtest { };
+
+  sphinx-issues = callPackage ../development/python-modules/sphinx-issues { };
 }
