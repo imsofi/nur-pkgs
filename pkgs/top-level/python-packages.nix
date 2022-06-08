@@ -9,4 +9,6 @@ rec {
   sphinx-issues = callPackage ../development/python-modules/sphinx-issues { };
 
   slapd = callPackage ../development/python-modules/slapd { inherit sphinx-issues; };
+
+  smtpdfix = callPackage ../development/python-modules/smtpdfix { };
 }
