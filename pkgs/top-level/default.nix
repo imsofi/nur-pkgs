@@ -13,6 +13,8 @@ rec {
 
   packwiz = pkgs.callPackage ../tools/games/minecraft/packwiz { };
 
+  canaille = pkgs.callPackage ../servers/canaille { inherit extraPython3Packages; };
+
   # some-qt5-package = pkgs.libsForQt5.callPackage ../some-qt5-package { };
   # ...
 }
